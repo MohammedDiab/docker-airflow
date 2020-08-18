@@ -66,14 +66,15 @@ RUN set -ex \
     && apt-get purge --auto-remove -yqq $buildDeps \
     && apt-get autoremove -yqq --purge \
     && apt-get clean \
+    && ln -s /usr/bin/python python2 \
     && rm -rf \
         /var/lib/apt/lists/* \
         /tmp/* \039441f86337
         /var/tmp/* \
         /usr/share/man \
         /usr/share/doc \
-        /usr/share/doc-base \
-    && ln -s /usr/bin/python python2
+        /usr/share/doc-base
+
 
 COPY script/entrypoint.sh /entrypoint.sh
 COPY config/airflow.cfg ${AIRFLOW_USER_HOME}/airflow.cfg
