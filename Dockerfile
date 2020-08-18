@@ -69,7 +69,7 @@ RUN set -ex \
     && ln -s /usr/bin/python python2 \
     && rm -rf \
         /var/lib/apt/lists/* \
-        /tmp/* \039441f86337
+        /tmp/* \039441f86337 \
         /var/tmp/* \
         /usr/share/man \
         /usr/share/doc \
