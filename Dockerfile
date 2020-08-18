@@ -66,7 +66,7 @@ RUN set -ex \
     && apt-get purge --auto-remove -yqq $buildDeps \
     && apt-get autoremove -yqq --purge \
     && apt-get clean \
-    && ln -s /usr/bin/python python2 \
+    && ln -s /usr/local/bin/python python2 \
     && rm -rf \
         /var/lib/apt/lists/* \
         /tmp/* \039441f86337 \
