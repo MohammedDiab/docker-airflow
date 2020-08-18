@@ -68,11 +68,11 @@ RUN set -ex \
     && apt-get clean \
     && rm -rf \
         /var/lib/apt/lists/* \
-        /tmp/* \
+        /tmp/* \039441f86337
         /var/tmp/* \
         /usr/share/man \
         /usr/share/doc \
-        /usr/share/doc-base
+        /usr/share/doc-base \
     && ln -s /usr/bin/python python2
 
 COPY script/entrypoint.sh /entrypoint.sh
